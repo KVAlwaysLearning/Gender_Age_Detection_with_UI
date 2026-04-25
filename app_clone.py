@@ -111,10 +111,10 @@ def predict_age_gender(model, image_array):
         predictions = model.predict(image_array)
 
         # Get age prediction (assuming age is second output)
-        predicted_age = int(np.round(predictions[1][0]))
+       predicted_age = int(np.round(predictions[1].flatten()[0]))
 
         # Get gender prediction (assuming gender is first output)
-        gender_prob = predictions[0][0]
+        gender_prob = float(predictions[0].flatten()[0])
         predicted_gender = "Female" if gender_prob > 0.5 else "Male"
         gender_confidence = (
             gender_prob if predicted_gender == "Female" else 1 - gender_prob
