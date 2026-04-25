@@ -178,7 +178,7 @@ def main():
                     col1.image(
                         image,
                         caption=f"Image {i+1}: {uploaded_file.name}",
-                        use_column_width=True,
+                        use_container_width=True,
                     )
 
                     # Process image
@@ -217,7 +217,7 @@ def main():
                         st.markdown("<hr>", unsafe_allow_html=True)
 
     # Show message if no files uploaded
-    elif st.button("Detect Age & Gender"):
+    elif st.button("Detect Age & Gender", key="sidebar_process_btn"):
         st.info("Please upload one or more images first.")
 
     # Footer
