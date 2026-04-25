@@ -221,9 +221,7 @@ def main():
         st.info("Please upload one or more images first.")
 
     # Footer
-    st.markdown(
-        '<div class="app-footer">Powered by NULLCLASS🧑‍💻</div>', unsafe_allow_html=True
-    )
+    
 
 
 if __name__ == "__main__":
